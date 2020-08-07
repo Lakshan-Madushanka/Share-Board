@@ -1,0 +1,25 @@
+create database shareboard;
+
+use shareboard;
+
+create table users(
+
+	id int primary key auto_increment,
+	name varchar(255),
+	email varchar(255),
+	passsword varchar(255),
+	register_date DATETIME default current_time 
+	
+);
+
+create table shares(
+
+	id int primary key auto_increment,
+	user_id int,
+	title varchar(255),
+	body TEXT,
+	link varchar(255),
+	create_date DATETIME default current_time 
+	
+);
+
